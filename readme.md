@@ -54,4 +54,25 @@ pip install pandas numpy matplotlib seaborn scikit-learn xgboost joblib
 
 ---
 
+## Updates
+1. **Added New Feature Engineering:**
+   - Added 'Monthly_Cost_Ratio' = MonthlyCharges / TotalCharges
+   - Added 'Tenure_Cost_Ratio' = TotalCharges / Tenure Months
+   - Both features are now included in all model training
+
+2. **Code Improvements:**
+   - Fixed column name references to use correct 'Tenure Months' instead of 'tenure'
+   - Added proper handling of infinite values and NaN in calculated ratios
+   - Added visualization of new features' relationship with churn
+   - Updated feature importance analysis to include new calculated columns
+
+3. **New Visualizations:**
+   - Added boxplots showing distribution of both new ratios by churn status
+   - Added correlation analysis of new features with churn
+   - Updated feature importance plots to include new calculated columns
+
+These updates enhance the model's ability to capture the relationship between customer spending patterns, tenure, and churn probability.
+
+---
+
 For details, see the step-by-step workflow and code in `main.ipynb`.
